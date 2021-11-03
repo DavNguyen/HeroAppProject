@@ -1,8 +1,8 @@
 # HeroAppProject
 Hello
+<<<<<<< Updated upstream
 
 //Nick
-//Karen
-//Matthew
-
-
+=======
+//Karen 
+>>>>>>> Stashed changes
