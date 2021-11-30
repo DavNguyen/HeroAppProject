@@ -22,46 +22,46 @@ function App() {
           color="primary"
         />
         <TextField
+          value={value}
+          onChange={handleChange}
           label="Enter Your Hero's Age"
           variant="outlined"
-          color="secondary"
-          type="email"
-          required
+          color="primary"
         />
         <TextField
-          label="Enter Your Hero's Gender "
+          value={value}
+          onChange={handleChange}
+          label="Enter Your Hero's Gender"
           variant="outlined"
-          color="secondary"
-          type="email"
-          required
+          color="primary"
         />
         <TextField
+          value={value}
+          onChange={handleChange}
           label="Enter Your Hero's Description"
           variant="outlined"
-          color="secondary"
-          type="email"
-          required
+          color="primary"
         />
         <TextField
+          value={value}
+          onChange={handleChange}
           label="Enter Your Hero's Ability"
           variant="outlined"
-          color="secondary"
-          type="email"
-          required
+          color="primary"
         />
         <TextField
+          value={value}
+          onChange={handleChange}
           label="Enter Your Hero's Health"
           variant="outlined"
-          color="secondary"
-          type="email"
-          required
+          color="primary"
         />
         <TextField
-          label="Copy and Paste Your Hero's Image Link Here"
+          value={value}
+          onChange={handleChange}
+          label="Paste Your Hero's Image Link"
           variant="outlined"
-          color="secondary"
-          type="email"
-          required
+          color="primary"
         />
         <Button variant="outlined">Create Hero</Button>
       </div>
