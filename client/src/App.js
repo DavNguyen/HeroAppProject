@@ -11,81 +11,110 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
+const useStyles = makeStyles({
+  root: {
+    width: 600,
+  },
+  media: {
+    height: 50,
+  },
+  field: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 7,
+    marginBottom: 7,
+  },
+});
+
 function App() {
-  const [value, setValue] = useState("");
-  const handleChange = (e) => {
-    console.log(`Typed => ${e.target.value}`);
-    setValue(e.target.value);
-  };
-
-  const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 140,
-    },
-  });
-
   const classes = useStyles();
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [gender, setGender] = useState("");
+  const [desc, setDesc] = useState("");
+  const [ab, setAb] = useState("");
+  const [hp, setHp] = useState("");
+  const [image, setImage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name && age && gender && desc && ab && hp) {
+      console.log(name, age, gender, desc, ab, hp);
+    }
+  };
 
   return (
     <div className="App">
       <div className="App-header">
         <h1> Custom Hero Database Builder </h1>
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Enter Your Hero's Name"
-          variant="outlined"
-          color="primary"
-        />
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Enter Your Hero's Age"
-          variant="outlined"
-          color="primary"
-        />
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Enter Your Hero's Gender"
-          variant="outlined"
-          color="primary"
-        />
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Enter Your Hero's Description"
-          variant="outlined"
-          color="primary"
-        />
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Enter Your Hero's Ability"
-          variant="outlined"
-          color="primary"
-        />
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Enter Your Hero's Health"
-          variant="outlined"
-          color="primary"
-        />
-        <TextField
-          value={value}
-          onChange={handleChange}
-          label="Paste Your Hero's Image Link"
-          variant="outlined"
-          color="primary"
-        />
-        <Button variant="contained" color="primary" type="submit">
-          Create Hero
-        </Button>
-
+        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+          <div>
+            <TextField
+              onChange={(e) => setName(e.target.value)}
+              label="Enter Your Hero's Name"
+              variant="outlined"
+              color="primary"
+              className={classes.field}
+            />
+            <TextField
+              onChange={(e) => setAge(e.target.value)}
+              label="Enter Your Hero's Age"
+              variant="outlined"
+              color="primary"
+              className={classes.field}
+            />
+            <TextField
+              onChange={(e) => setGender(e.target.value)}
+              label="Enter Your Hero's Gender"
+              variant="outlined"
+              color="primary"
+              className={classes.field}
+            />
+          </div>
+          <TextField
+            fullWidth
+            onChange={(e) => setDesc(e.target.value)}
+            label="Enter Your Hero's Description"
+            variant="outlined"
+            color="primary"
+            className={classes.field}
+          />
+          <div>
+            <TextField
+              onChange={(e) => setAb(e.target.value)}
+              label="Enter Your Hero's Ability"
+              variant="outlined"
+              color="primary"
+              className={classes.field}
+            />
+            <TextField
+              onChange={(e) => setHp(e.target.value)}
+              label="Enter Your Hero's Health"
+              variant="outlined"
+              color="primary"
+              className={classes.field}
+            />
+          </div>
+          <TextField
+            fullWidth
+            onChange={(e) => setImage(e.target.value)}
+            label="Paste Your Hero's Image Link"
+            variant="outlined"
+            color="primary"
+            className={classes.field}
+          />
+          <div>
+            <Button
+              className={classes.field}
+              variant="contained"
+              color="primary"
+              type="submit"
+            >
+              Create Hero
+            </Button>
+          </div>
+        </form>
+        <div>Your Heros:</div>
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
@@ -95,20 +124,34 @@ function App() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                {value}
+                Image: {image}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+              <Typography gutterBottom variant="h5" component="h2">
+                Name: {name}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="h2">
+                Age: {age}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="h2">
+                Gener: {gender}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="h2">
+                Desc: {desc}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="h2">
+                Ability: {ab}
+              </Typography>
+              <Typography gutterBottom variant="h5" component="h2">
+                HP: {hp}
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button size="small" color="primary">
-              Share
+              Edit Hero
             </Button>
             <Button size="small" color="primary">
-              Learn More
+              Delete Hero
             </Button>
           </CardActions>
         </Card>
