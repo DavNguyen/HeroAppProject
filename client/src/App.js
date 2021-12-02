@@ -19,10 +19,10 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles({
   root: {
-    width: 600,
+    width: 640,
   },
   media: {
-    height: 50,
+    height: 300,
   },
   field: {
     marginLeft: 5,
