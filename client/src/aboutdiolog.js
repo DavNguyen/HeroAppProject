@@ -35,13 +35,27 @@ export function AboutAuthors() {
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle id="alert-dialog-slide-title">
-          {"Contributors:"}
+          {"About The HeroApp Project:"}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
-            David: david did some cool stuff Nick: /n Nick also did some cool
-            stuff Karen: Karen also, in fact, did some cool stuff Matthew:
-            Matthew also, in fact, did, quite, some cool stuff
+            The HeroApp project has been an effort to create a database for
+            fictional characters that is easy to use and navigate. The Project
+            was started September 1st, 2021 and concluded December 6th, 2021.
+            <br />
+            <br /> Contributers: <br />
+            David Nguyen: Created Github Repository, Created MongoDB Server,
+            Implimented PostMan functionality <br />
+            Nick Nguyen: Created hero implimentation feature in app
+            <br />
+            Karen Mendoza: Implimented search engine feature
+            <br />
+            Matthew Morgan: Implimented top navigation bar
+            <br />
+            Colby Mize: Helped with documentation <br />
+            <br /> Resources used: <br />
+            Material-UI, PostMan API, MongoDB, Visual Studios, Github
+            repository, Coded in Javascript
           </DialogContentText>
         </DialogContent>
       </Dialog>
