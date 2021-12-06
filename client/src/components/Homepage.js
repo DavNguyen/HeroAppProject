@@ -6,6 +6,7 @@ import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import Paper from "@mui/material/Paper";
 // import SearchBar from "material-ui-search-bar";
 // import SearchBar from "@material-ui/core/SearchBar";
 
@@ -49,6 +50,7 @@ export default class Homepage extends Component {
             <Typography variant="h6" color="inherit" noWrap>
               My Favorite Superheroes Database Collection
             </Typography>
+            <br />
             {/* <Link to="/"> */}
             <Button style={homeButtonStyle} variant="outlined">
               Home / Clear Page
@@ -61,9 +63,11 @@ export default class Homepage extends Component {
         <br />
         <h1 color="secondary">My Favorite Superheroes!</h1>
         <br />
+        <img src="https://c4.wallpaperflare.com/wallpaper/84/210/523/multiple-display-marvel-comics-dc-comics-spider-man-wallpaper-preview.jpg" />
+        <br />
         {/* <Route path="/findhero" component={FindHero} />
           <Link to="/findhero"> */}
-        <Button size="large" variant="outlined">
+        <Button size="large" color="secondary" variant="contained">
           Click to Search Hero by Id
         </Button>
         {/* </Link> */}
@@ -74,22 +78,22 @@ export default class Homepage extends Component {
           <Route path="/deletehero" component={DeleteHero} />
           <Route path="/edithero" component={EditHero} />
           <Link to="/heroes"> */}
-        <Button style={buttonSpacing} color="primary" variant="outlined">
+        <Button style={buttonSpacing} color="primary" variant="contained">
           View All Heroes
         </Button>
         {/* </Link>
           <Link to="/addhero"> */}
-        <Button style={buttonSpacing} color="secondary" variant="outlined">
+        <Button style={buttonSpacing} color="secondary" variant="contained">
           Add Hero
         </Button>
         {/* </Link>
           <Link to="/edithero"> */}
-        <Button style={buttonSpacing} color="primary" variant="outlined">
+        <Button style={buttonSpacing} color="primary" variant="contained">
           Edit Hero
         </Button>
         {/* </Link>
           <Link to="/deletehero"> */}
-        <Button style={buttonSpacing} color="secondary" variant="outlined">
+        <Button style={buttonSpacing} color="secondary" variant="contained">
           Delete Hero
         </Button>
         {/* </Link> */}
