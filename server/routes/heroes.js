@@ -22,8 +22,8 @@ router.post("/", async (req, res) => {
     gender: req.body.gender,
     img: req.body.img,
     description: req.body.description,
-    strength: req.body.strength,
-    speed: req.body.speed,
+    // strength: req.body.strength,
+    // speed: req.body.speed,
     hp: req.body.hp,
     abilities: req.body.abilities,
   });
@@ -33,6 +33,7 @@ router.post("/", async (req, res) => {
   } catch (err) {
     res.json({ message: err });
   }
+  console.log(req.body);
 });
 
 //RETURNS SPECIFIC HERO
