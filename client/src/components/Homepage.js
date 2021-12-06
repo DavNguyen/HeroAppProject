@@ -2,14 +2,13 @@ import React, { useState, useEffect, Component } from "react";
 import heroCalls from "../API/heroCalls";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Paper from "@mui/material/Paper";
+// import Paper from "@mui/material/Paper";
 // import SearchBar from "material-ui-search-bar";
 // import SearchBar from "@material-ui/core/SearchBar";
-
 import Heroes from "./Heroes";
 import AddHero from "./AddHero";
 import DeleteHero from "./DeleteHero";
@@ -22,6 +21,7 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
+import { Paper } from "@material-ui/core";
 
 export default class Homepage extends Component {
   constructor(props) {
@@ -96,9 +96,11 @@ export default class Homepage extends Component {
         <Button style={buttonSpacing} color="secondary" variant="contained">
           Delete Hero
         </Button>
+
         {/* </Link> */}
         <br />
         <br />
+
         {/* </Router> */}
       </div>
     );
