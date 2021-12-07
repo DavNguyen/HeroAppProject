@@ -16,10 +16,9 @@ import EditHero from "./EditHero";
 import FindHero from "./FindHero";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
-  Redirect,
-  Link,
+  useNavigate,
 } from "react-router-dom";
 import { Paper } from "@material-ui/core";
 
@@ -44,18 +43,24 @@ export default class Homepage extends Component {
 
     return (
       <div className="App">
-        {/* <Router> */}
+        <Router>
+          <Routes>
+            <Route path="/findhero" element={<FindHero />} />
+            <Route path="/heroes" element={<Heroes />} />
+            <Route path="/addhero" element={<AddHero />} />
+            <Route path="/deletehero" element={<DeleteHero />} />
+            <Route path="/edithero" element={<EditHero />} />
+          </Routes>
+        </Router>
         <AppBar position="fixed">
           <Toolbar>
             <Typography variant="h6" color="inherit" noWrap>
               My Favorite Superheroes Database Collection
             </Typography>
             <br />
-            {/* <Link to="/"> */}
-            <Button style={homeButtonStyle} variant="outlined">
+            <Button style={homeButtonStyle} type="button" variant="outlined">
               Home / Clear Page
             </Button>
-            {/* </Link> */}
           </Toolbar>
         </AppBar>
         <br />
@@ -65,43 +70,35 @@ export default class Homepage extends Component {
         <br />
         <img src="https://c4.wallpaperflare.com/wallpaper/84/210/523/multiple-display-marvel-comics-dc-comics-spider-man-wallpaper-preview.jpg" />
         <br />
-        {/* <Route path="/findhero" component={FindHero} />
-          <Link to="/findhero"> */}
+
         <Button size="large" color="secondary" variant="contained">
           Click to Search Hero by Id
         </Button>
-        {/* </Link> */}
         <br />
         <br />
-        {/* <Route path="/heroes" component={Heroes} />
-          <Route path="/addhero" component={AddHero} />
-          <Route path="/deletehero" component={DeleteHero} />
-          <Route path="/edithero" component={EditHero} />
-          <Link to="/heroes"> */}
+
+        {/* <Link to="/heroes"> */}
         <Button style={buttonSpacing} color="primary" variant="contained">
           View All Heroes
         </Button>
-        {/* </Link>
-          <Link to="/addhero"> */}
+        {/* </Link> */}
+        {/* <Link to="/addhero"> */}
         <Button style={buttonSpacing} color="secondary" variant="contained">
           Add Hero
         </Button>
-        {/* </Link>
-          <Link to="/edithero"> */}
+        {/* </Link> */}
+        {/* <Link to="/edithero"> */}
         <Button style={buttonSpacing} color="primary" variant="contained">
           Edit Hero
         </Button>
-        {/* </Link>
-          <Link to="/deletehero"> */}
+        {/* </Link> */}
+        {/* <Link to="/deletehero"> */}
         <Button style={buttonSpacing} color="secondary" variant="contained">
           Delete Hero
         </Button>
-
         {/* </Link> */}
         <br />
         <br />
-
-        {/* </Router> */}
       </div>
     );
   }
