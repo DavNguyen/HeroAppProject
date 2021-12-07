@@ -23,6 +23,13 @@ export default class Homepage extends Component {
     this.state = {};
   }
 
+  handleClick = () => {
+    this.setState({ open: true });
+  };
+  handleClick = () => {
+    this.setState({ open: false });
+  };
+
   render() {
     const homeButtonStyle = {
       color: "white",
@@ -53,7 +60,15 @@ export default class Homepage extends Component {
               My Favorite Superheroes Database Collection
             </Typography>
             <br />
-            <Button style={homeButtonStyle} type="button" variant="outlined">
+            <Button
+              href="http://localhost:3000"
+              targert=" "
+              edge="end"
+              onClick={this.handleClick}
+              style={homeButtonStyle}
+              type="button"
+              variant="outlined"
+            >
               Home / Clear Page
             </Button>
           </Toolbar>
@@ -65,33 +80,63 @@ export default class Homepage extends Component {
         <br />
         <img src="https://c4.wallpaperflare.com/wallpaper/84/210/523/multiple-display-marvel-comics-dc-comics-spider-man-wallpaper-preview.jpg" />
         <br />
-
-        <Button size="large" color="secondary" variant="contained">
+        <Button
+          href="http://localhost:3000/findhero"
+          targert=" "
+          edge="end"
+          onClick={this.handleClick}
+          size="large"
+          color="secondary"
+          variant="contained"
+        >
           Click to Search Hero by Id
         </Button>
         <br />
         <br />
-
-        {/* <Link to="/heroes"> */}
-        <Button style={buttonSpacing} color="primary" variant="contained">
+        <Button
+          href="http://localhost:3000/heroes"
+          targert=" "
+          edge="end"
+          onClick={this.handleClick}
+          style={buttonSpacing}
+          color="primary"
+          variant="contained"
+        >
           View All Heroes
         </Button>
-        {/* </Link> */}
-        {/* <Link to="/addhero"> */}
-        <Button style={buttonSpacing} color="secondary" variant="contained">
+        <Button
+          href="http://localhost:3000/addhero"
+          targert=" "
+          edge="end"
+          onClick={this.handleClick}
+          style={buttonSpacing}
+          color="secondary"
+          variant="contained"
+        >
           Add Hero
         </Button>
-        {/* </Link> */}
-        {/* <Link to="/edithero"> */}
-        <Button style={buttonSpacing} color="primary" variant="contained">
+        <Button
+          href="http://localhost:3000/edithero"
+          targert=" "
+          edge="end"
+          onClick={this.handleClick}
+          style={buttonSpacing}
+          color="primary"
+          variant="contained"
+        >
           Edit Hero
         </Button>
-        {/* </Link> */}
-        {/* <Link to="/deletehero"> */}
-        <Button style={buttonSpacing} color="secondary" variant="contained">
+        <Button
+          href="http://localhost:3000/deletehero"
+          targert=" "
+          edge="end"
+          onClick={this.handleClick}
+          style={buttonSpacing}
+          color="secondary"
+          variant="contained"
+        >
           Delete Hero
         </Button>
-        {/* </Link> */}
         <br />
         <br />
       </div>
