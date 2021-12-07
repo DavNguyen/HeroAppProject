@@ -87,7 +87,6 @@ function App() {
                   <br />
                   Matthew Morgan: Implimented top navigation bar
                   <br />
-                  Colby Mize: Helped with documentation <br />
                   <br /> Resources used: <br />
                   Material-UI, PostMan API, MongoDB, Visual Studios, Github
                   repository, Coded in Javascript
