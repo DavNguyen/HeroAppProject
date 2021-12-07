@@ -44,7 +44,7 @@ export default class Homepage extends Component {
 
     return (
       <div className="App">
-        <Router>
+        {/* <Router>
           <Routes>
             <Route path="/findhero" element={<FindHero />} />
             <Route path="/heroes" element={<Heroes />} />
@@ -52,7 +52,7 @@ export default class Homepage extends Component {
             <Route path="/deletehero" element={<DeleteHero />} />
             <Route path="/edithero" element={<EditHero />} />
           </Routes>
-        </Router>
+        </Router> */}
         <AppBar position="fixed">
           <Toolbar>
             <Typography variant="h6" color="inherit" noWrap>
