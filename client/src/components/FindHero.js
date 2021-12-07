@@ -1,23 +1,17 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
 import heroCalls from "../API/heroCalls";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
+// import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-import Homepage from "./Homepage";
-import EditHero from "./EditHero";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  Link,
-} from "react-router-dom";
+// import Homepage from "./Homepage";
+// import EditHero from "./EditHero";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default class FindHero extends Component {
   constructor(props) {
@@ -72,8 +66,8 @@ export default class FindHero extends Component {
                   <li>Description = {this.state.data.description}</li>
                   <li>Age = {this.state.data.age}</li>
                   <li>Gender = {this.state.data.gender}</li>
-                  <li>Strength = {this.state.data.strength}</li>
-                  <li>Speed = {this.state.data.speed} </li>
+                  {/* <li>Strength = {this.state.data.strength}</li>
+                  <li>Speed = {this.state.data.speed} </li> */}
                   <li>HP = {this.state.data.hp} </li>
                   <li>Abilities = {this.state.data.abilities}</li>
                   <li>ID = {this.state.data._id} </li>
@@ -86,13 +80,12 @@ export default class FindHero extends Component {
       </div>
     );
   };
-
+  
   render() {
     const buttonSpacing = {
       padding: "10px",
       marginLeft: "20px",
     };
-
     return (
       <div>
         <form className="flex-container">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
 import heroCalls from "../API/heroCalls";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
@@ -8,15 +8,9 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Homepage from "./Homepage";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  Link,
-} from "react-router-dom";
+// import CssBaseline from "@material-ui/core/CssBaseline";
+// import Homepage from "./Homepage";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default class Heroes extends Component {
   constructor(props) {

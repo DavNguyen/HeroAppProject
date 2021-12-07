@@ -1,8 +1,8 @@
-import React, { useState, useEffect, Component } from "react";
-import heroCalls from "../API/heroCalls";
-import Card from "@material-ui/core/Card";
+import React, { Component } from "react";
+// import heroCalls from "../API/heroCalls";
+// import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -15,7 +15,6 @@ import DeleteHero from "./DeleteHero";
 import EditHero from "./EditHero";
 import FindHero from "./FindHero";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Paper } from "@material-ui/core";
 
 export default class Homepage extends Component {
   constructor(props) {
@@ -62,7 +61,7 @@ export default class Homepage extends Component {
             <br />
             <Button
               href="http://localhost:3000"
-              targert=" "
+              target=" "
               edge="end"
               onClick={this.handleClick}
               style={homeButtonStyle}
@@ -78,11 +77,12 @@ export default class Homepage extends Component {
         <br />
         <h1 color="secondary">My Favorite Superheroes!</h1>
         <br />
+        {/* eslint-disable-next-line */}
         <img src="https://c4.wallpaperflare.com/wallpaper/84/210/523/multiple-display-marvel-comics-dc-comics-spider-man-wallpaper-preview.jpg" />
         <br />
         <Button
           href="http://localhost:3000/findhero"
-          targert=" "
+          target=" "
           edge="end"
           onClick={this.handleClick}
           size="large"
@@ -95,7 +95,7 @@ export default class Homepage extends Component {
         <br />
         <Button
           href="http://localhost:3000/heroes"
-          targert=" "
+          target=" "
           edge="end"
           onClick={this.handleClick}
           style={buttonSpacing}
@@ -106,7 +106,7 @@ export default class Homepage extends Component {
         </Button>
         <Button
           href="http://localhost:3000/addhero"
-          targert=" "
+          target=" "
           edge="end"
           onClick={this.handleClick}
           style={buttonSpacing}
@@ -117,7 +117,7 @@ export default class Homepage extends Component {
         </Button>
         <Button
           href="http://localhost:3000/edithero"
-          targert=" "
+          target=" "
           edge="end"
           onClick={this.handleClick}
           style={buttonSpacing}
@@ -128,7 +128,7 @@ export default class Homepage extends Component {
         </Button>
         <Button
           href="http://localhost:3000/deletehero"
-          targert=" "
+          target=" "
           edge="end"
           onClick={this.handleClick}
           style={buttonSpacing}

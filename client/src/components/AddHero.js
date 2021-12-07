@@ -1,16 +1,10 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
 import heroCalls from "../API/heroCalls";
-import Card from "@material-ui/core/Card";
-import Typography from "@material-ui/core/Typography";
+// import Card from "@material-ui/core/Card";
+// import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-  Link,
-} from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default class AddHero extends Component {
   constructor(props) {
